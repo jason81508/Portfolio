@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Noto+Sans+TC:wght@500&family=Poppins:wght@200;300;500;600&display=swap');
+:root {
+    --bg-black-900:#f2f2fc;
+    --bg-black-100:#fdf9ff;
+    --bg-black-50:#e8dfec;
+    --text-black-900:#302e4d;
+    --text-black-700:#504e70;
+    --skin-blue-color:#B5EAEA;
+    --skin-green-color:#EDF6E5;
+    --skin-peech-color:#FFBCBC;
+    --skin-pink-color:#F38BA0;
+}
+body {
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+* {
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+::before, ::after {
+    box-sizing: border-box;
+}
+
+/* aside star */
+.aside {
+    width: 270px;
+    height: 100%;
+    background-color: var(--bg-black-100);
+    border-left: 1px solid var(--bg-black-100);
+    padding: 30px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.aside .logo {
+    position: absolute;
+    top: 50px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.aside .logo a {
+    color: var(--text-black-900);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    position: relative;
+}
+.aside .logo a h1 {
+    /* font-family: 'Clicker Script', cursive; */
+    font-size: 35px;
+}
+.aside .logo a::before {
+    width: 20px;
+    height: 20px;
+    content: '';
+    position: absolute;
+    border-bottom:5px solid var(--skin-pink-color);
+    border-left:5px solid var(--skin-pink-color);
+    bottom: 20px;
+    left: -40px;
+}
+.aside .logo a::after {
+    width: 20px;
+    height: 20px;
+    content: '';
+    position: absolute;
+    border-top:5px solid var(--skin-pink-color);
+    border-right:5px solid var(--skin-pink-color);
+    top: 20px;
+    right: -110px;
+}
+/* mobile nav Star */
+.aside .nav-toggler {
+    height: 40px;
+    width: 45px;
+    border: 1px solid var(--bg-black-50);
+    cursor: pointer;
+    position: fixed;
+    left: 300px;
+    top: 20px;
+    border-radius: 5px;
+    background-color: var(--bg-black-100);
+    /* display: flex; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.aside .nav-toggler span {
+    height: 2px;
+    width: 18px;
+    background-color: var(--skin-pink-color);
+    position: relative;
+}
+.aside .nav-toggler span::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 18px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0px 8px 0px var(--skin-pink-color), 0px -8px 0px var(--skin-pink-color);
+}
+/* mobile nav End */
+.aside .nav li {
+    padding: 20px;
+}
+.aside .nav li a {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    color: var(--text-black-700);
+    border-bottom: 1px solid var(--bg-black-50);
+    padding: 5px 15px;
+}
+.aside .nav li a.active {
+    color: var(--skin-pink-color);
+}
+.aside .nav li a i {
+    margin-right: 8px;
+}
+/* aside end */
+
+/* main-content star */
+.main-content {
+    padding-left: 270px;
+}
+.content-wrap.home {
+    background-color:var(--bg-black-900);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+.container {
+    max-width: 1400px;
+    /* margin: 0 auto; */
+}
+.container .row .my-img {
+    margin: 0 20px;
+}
+.container .row .my-img img {
+    height: 400px;
+}
+.container .row {
+    display: flex;
+    position: relative;
+}
+.container .row .my-img::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-top: 10px solid var(--skin-pink-color);
+    border-left: 10px solid var(--skin-pink-color);
+    top: -60px;
+    right: 300px;
+}
+.container .row .my-img::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-bottom: 10px solid var(--skin-pink-color);
+    border-right: 10px solid var(--skin-pink-color);
+    bottom: -50px;
+    right: -40px;
+}
+.container .row .hello {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.container .row .profession {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.container .row p {
+    font-size: 16px;
+    line-height: 2em;
+    letter-spacing: 1.2px;
+    margin-bottom: 30px;
+}
+.container .row .name {
+    font-size: 50px;
+    font-family: 'Clicker Script', cursive;
+    color: var(--skin-peech-color);
+}
+.container .row .new-type {
+    font-size: 40px;
+    color: var(--skin-blue-color);
+}
+.container .row .btn {
+    font-size: 16px;
+    padding: 12px 30px;
+    border-radius: 50px;
+    background-color: var(--skin-blue-color);
+    color: var(--text-black-900);
+    transition: all .3s 0s ease;
+}
+.container .row .btn:hover {
+    background-color: var(--skin-peech-color);
+    color: var(--skin-blue-color);
+}
+.content-wrap.about {
+    background-color:var(--bg-black-900);
+    min-height: 100vh;
+    display: flex;
+    opacity: 1;
+}
+/* main-content end */
