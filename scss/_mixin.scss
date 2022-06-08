@@ -1,0 +1,83 @@
+.mb-30 {
+    margin-bottom: 30px;
+}
+.mr-30 {
+    margin-right: 30px;
+}
+
+
+
+
+@mixin logo-img {
+    text-indent:101%;
+    overflow:hidden;
+    white-space:nowrap;
+}// 圖片代替文字
+@mixin text-hidden-1 {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-wekite-box;
+}// 文字過長單行
+@mixin text-hidden-2 {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-wekite-box;
+    -wekit-line-clamp:2;
+    -wekit-box-orient: vertical;
+}// 文字過長多行
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}// 清除浮動
+@mixin order-tag-div($size,$TriangleColor) {
+    overflow: hidden;
+    // width hight 80px
+    width: $size;
+    height:$size;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    &:before {
+        content: '';
+        position: absolute;
+        border-bottom:6px solid $TriangleColor;
+        border-left: 6px solid transparent;
+        border-right:6px solid transparent;
+        left: 5px;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        border-top:6px solid transparent;
+        border-left: 6px solid $TriangleColor;
+        border-right:6px solid transparent;
+        bottom: 11px;
+        right: -6px;
+    }
+}// 購物車產品標籤(外層)
+@mixin order-tag-span($bgcolor, $textcolor) {
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    transform: rotate(45deg);
+    width: 120px;
+    height: 20px;
+    line-height: 21px;
+    background-color: $bgcolor;
+    color: $textcolor;
+    text-align: center;
+    font-size: 14px;
+}// 購物車產品標籤(內層)
+@mixin circle($size,$bgcolor) {
+    border-radius: 50%;
+    height: $size;
+    width: $size;
+    font-size: $size / 3;
+    background: $bgcolor;
+}// 產入對應的圓

@@ -1,0 +1,104 @@
+// CONTACT
+.content-wrap.contact {
+    background-color:var(--bg-black-900);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .contact-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 20px 20px;
+        .contact-item {
+            width: 19%;
+            padding: 1.5% 1.5%;
+            margin: 1.5% 1.5%;
+            background-color: #fff;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            @include ipad() {
+                width: 44%;
+            }
+            @include m568() {
+                width: 94%;
+            }
+            &:hover {
+                box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+            }
+            i {
+                color: var(--skin-degreen-color);
+                font-size: 25px;
+                margin: 20px 0;
+            }
+            h3 {
+                color: var(--skin-blue-color);
+                font-size: 25px;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .qa-title {
+        text-align: center;
+        width: 100%;
+        h4 {
+            font-size: 22px;
+            font-weight:bold;
+            span {
+                color: var(--skin-sky-color);
+            }
+        }
+    }
+    .contactus {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        input {
+            width: 35%;
+            border: none;
+            padding: 15px 10px;
+            margin:0px 15px 30px 0px;
+            border-radius: 5px;
+            transition: .3s;
+            @include m568() {
+                width: 94%;
+                padding: 1.5% 1.5%;
+                margin:1.5% 1.5%;
+            }
+            &:focus {
+                box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+            }
+            &[type=submit] {
+                font-size: 15px;
+                color:#fff;
+                background-color: var(--skin-blue-color);
+                cursor: pointer;
+                padding: 9px 30px;
+                transition: .3s;
+                &:hover {
+                    background-color:var(--skin-sky-color);
+                }
+            }
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 30px;
+            border: none;
+            border-radius: 5px;
+            transition: .3s;
+            &:focus {
+                box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+            }
+        }
+    }
+}

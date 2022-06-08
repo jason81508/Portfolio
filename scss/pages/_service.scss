@@ -1,0 +1,49 @@
+// SERVICE
+.content-wrap.service {
+    background-color:var(--bg-black-900);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .service-content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px 20px;
+        .service-item {
+            width: 27%;
+            padding: 1.5% 1.5%;
+            margin: 1.5% 1.5%;
+            background-color: #fff;
+            border-radius: 10px;
+            text-align: center;
+            transform: all 0.3s ease;
+            @include ipad() {
+                width: 44%;
+            }
+            @include m568() {
+                width: 94%;
+            }
+            &:hover,
+            &:active {
+                box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+            }
+            i {
+                color: var(--skin-degreen-color);
+                font-size: 25px;
+                margin: 20px 0;
+            }
+            h3 {
+                color: var(--skin-blue-color);
+                font-size: 25px;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+// INDEX
+.content-wrap.home {
+    background-color:var(--bg-black-900);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .home-info {
+        width: 60%;
+        @include ipad() {
+            width: 100%;
+        }
+        p {
+            font-size: 18px;
+            line-height: 2em;
+            letter-spacing: 1.2px;
+        }
+        .hello {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .profession {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .name {
+            font-size: 50px;
+            font-family: 'Prompt', sans-serif;
+            color: var(--skin-degreen-color);
+            @include m568 {
+                font-size: 35px;
+            }
+        }
+        .new-type {
+            font-size: 40px;
+            font-family: 'Prompt', sans-serif;
+            color: var(--skin-blue-color);
+            @include m568 {
+                font-size: 25px;
+            }
+        }
+    }
+    .my-img {
+        width: 40%;
+        position: relative;
+        z-index: 1;
+        @include ipad() {
+            width: 100%;
+            text-align: center;
+        }
+        img {
+            position: relative;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background-color: var(--skin-gray-color);
+            border-radius: 50%;
+            box-shadow: 20px 1px 0px var(--skin-blue-color);
+            top: -40px;
+            left: -20px;
+            z-index: -1;
+            @include desktop() {
+                width: 300px;
+                height: 300px;
+                top: 60px;
+                left: 60px;
+            }
+            @include ipad() {
+                display: none;
+            }
+        }
+        &:after {
+            content: 'Web Designer';
+            font-size: 50px;
+            font-weight: bold;
+            line-height: 1;
+            color: var(--skin-degreen-color);
+            writing-mode:vertical-rl;
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            /* background-color: #000; */
+            border-bottom: 2px solid var(--skin-degreen-color);
+            bottom: 0px;
+            left:150px;
+            @include desktop() {
+                font-size: 40px;
+                line-height: 1.2;
+                writing-mode: initial;
+                width: 220px;
+                height: 120px;
+                bottom: 0px;
+                left:0px;
+            }
+            @include ipad() {
+                font-size: 40px;
+                line-height: 1.2;
+                writing-mode: initial;
+                width: 220px;
+                height: 120px;
+                bottom: 0px;
+                left:0px;
+            }
+        }
+    }
+}

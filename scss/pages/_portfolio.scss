@@ -1,0 +1,66 @@
+// PORTFOLIO
+.content-wrap.portfolio {
+    background-color:var(--bg-black-900);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .portfolio-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 20px 20px;
+        .portfolio-item {
+            width: 44%;
+            padding: 1.5% 1.5%;
+            margin: 1.5% 1.5%;
+            background-color: #fff;
+            border-radius: 10px;
+            text-align: center;
+            transform: all 0.3s ease;
+            position: relative;
+            @include ipad() {
+                width: 94%;
+            }
+            .portfolio-tag {
+                @include order-tag-div(80px,#ffb05b);
+                span {
+                    @include order-tag-span(#FFD95B, #fff);
+                }
+            }
+            .portfolio-text {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                opacity: 0;
+                color: #fff;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                transition: .5s;
+                &:hover {
+                    position: absolute;
+                    opacity: 0.7;
+                    background-color: var(--skin-degreen-color);
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+                h3 {
+                    width: 100%;
+                    font-size: 50px;
+                    @include ipad() {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

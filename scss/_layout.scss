@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Prompt:wght@200&family=Roboto+Flex:opsz,wght@8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&display=swap');
+:root {
+    --bg-black-900:#f2f2fc;
+    --bg-black-100:#fdf9ff;
+    --bg-black-50:#e8dfec;
+    --text-black-900:#302e4d;
+    --text-black-700:#504e70;
+    --skin-degreen-color:#053742;
+    --skin-blue-color:#39A2DB;
+    --skin-sky-color:#A2DBFA;
+    --skin-gray-color:#E8F0F2;
+}
+body {
+    line-height: 1.5;
+    font-size: 18px;
+    font-family: 'Roboto Flex', sans-serif;
+}
+// ASIDE STAR
+.aside {
+    width: 270px;
+    height: 100%;
+    background-color: var(--bg-black-100);
+    border-left: 1px solid var(--bg-black-100);
+    padding: 30px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10;
+    @include desktop() {
+        left: -270px;
+        transition:.3s;
+    }
+    // LOGO STAR
+    .logo {
+        position: absolute;
+        top: 50px;
+        background-image: url(../images/LOGO.svg);
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: nowrap;
+        @include ipad() {
+            background-image: url(../images/LOGO_M.svg);
+        }
+        h1{
+            a {
+                display: block;
+                width: 210px;
+                height: 144px;
+                @include ipad() {
+                    width: 150px;
+                    height: 103px;
+                }
+            }
+        }
+         
+    }
+    // LOGO END
+    // MOBILE NAV STAR
+    .nav-toggler {
+        height: 40px;
+        width: 45px;
+        border: 1px solid var(--bg-black-50);
+        cursor: pointer;
+        position: fixed;
+        border-radius: 5px;
+        background-color: var(--bg-black-100);
+        /* display: flex; */
+        display: none;
+        @include desktop() {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            right: 20px;
+            top: 20px;
+        }
+        span {
+            height: 2px;
+            width: 18px;
+            background-color: var(--skin-blue-color);
+            position: relative;
+            @include desktop() {
+                transition:.3s;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                height: 2px;
+                width: 18px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                box-shadow: 0px 8px 0px var(--skin-blue-color), 0px -8px 0px var(--skin-blue-color);
+            }
+        }
+    }
+    // MOBILE NAV END
+    // NAV STAR
+    .nav {
+        li {
+            padding: 20px;
+            a {
+                font-size: 18px;
+                font-weight: bold;
+                display: block;
+                color: var(--text-black-700);
+                border-bottom: 1px solid var(--bg-black-50);
+                padding: 5px 15px;
+                &.active {
+                    color: var(--skin-blue-color);
+                }
+                i {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+    // NAV END
+}
+//jQ點擊後動態在 body 加上 class
+.menu-show {
+    .aside {
+        @include desktop() {
+            left: 0;
+        }
+        .nav-toggler {
+            span {
+                &:before {
+                    box-shadow: 10px 8px 0px var(--skin-blue-color), -10px -8px 0px var(--skin-blue-color);
+                }
+            }
+        }
+    }
+    
+}
+// ASIDE END
+
+// MAIN CONTENT STAR
+.main-content {
+    padding-left: 270px;
+    @include desktop() {
+        padding-left: 0;
+    }
+}
+.container {
+    max-width: 1400px;
+    width: 100%;
+    padding: 20px 20px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.page-title {
+    width: 100%;
+    padding: 20px 20px;
+    h2 {
+        font-size: 40px;
+        color: var(--text-black-900);
+        font-weight: bold;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            height: 4px;
+            width: 70px;
+            background-color: var(--skin-blue-color);
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+// MAIN CONTENT END
